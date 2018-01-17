@@ -38,7 +38,7 @@
 					</div>
                     <div class="form-group">
 						<label class="control-label" for="Surname">Surname:</label>
-						<input required type="text" name="Surname" id="Surname" maxlength="25" class="form-control" placeholder="Insert Surname" value="<?php if (isset($row)) echo $row["nom"]?>"/>
+						<input required type="text" name="Surname" id="Surname" maxlength="25" class="form-control" placeholder="Insert Surname" value="<?php if (isset($row)) echo $row["Surname"]?>"/>
 					</div>
 					<div class="form-group">
 						<label class="control-label" for="Name">Name:</label>
