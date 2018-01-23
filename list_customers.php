@@ -63,21 +63,21 @@
           <tr class="success">
             <th>&nbsp;</th>
             <th>&nbsp;</th>
-            <th>Number</th>
-            <th>Surname</th>
-            <th>Name</th>
-            <th>Phonenumber</th>
-            <th>Mail</th>
-            <th>Address</th>
-            <th>Parroquia</th>
+            <th>id_customer</th>
+            <th>surname</th>
+            <th>name</th>
+            <th>phonenumber</th>
+            <th>mail</th>
+            <th>address</th>
+            <th>parroquia</th>
           </tr>
         </thead>
         <tbody>
         <?php  // output data of each row
             while($row = $result->fetch_assoc()) { ?>
                 <tr>
-                    <td><center><a href="form_customer.php?operacio=edit&id_customer=<?=$row["id_customer"]?>" data-toggle="modal"><span class="glyphicon glyphicon-edit "></span></a></center></td>
-                    <td><center><a data-href="delete_customer.php?id_customer=<?=$row["id_customer"]?>" data-toggle="modal" data-target="#confirm-delete"><span class="glyphicon glyphicon-remove "></span></a></center></td>
+                    <td><center><a href="form_customers.php?operacio=edit&id_customer=<?=$row["id_customer"]?>" data-toggle="modal"><span class="glyphicon glyphicon-edit "></span></a></center></td>
+                    <td><center><a data-href="delete_customers.php?id_customer=<?=$row["id_customer"]?>" data-toggle="modal" data-target="#confirm-delete"><span class="glyphicon glyphicon-remove "></span></a></center></td>
                     <td><?=$row["id_customer"]?></td>
                     <td><?=$row["surname"]?></td>
                     <td><?=$row["name"]?></td>

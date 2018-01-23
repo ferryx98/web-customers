@@ -37,24 +37,24 @@
 						<input required type="number" name="id_customer" id="id_customer" min="1" max="10000" class="form-control" placeholder="Insert customer number" value="<?=$row["id_customer"]?>"<?php if ($operacio=="edit") echo "readonly" ?>/>
 					</div>
                     <div class="form-group">
-						<label class="control-label" for="Surname">Surname:</label>
-						<input required type="text" name="Surname" id="Surname" maxlength="25" class="form-control" placeholder="Insert Surname" value="<?php if (isset($row)) echo $row["Surname"]?>"/>
+						<label class="control-label" for="surname">surname:</label>
+						<input required type="text" name="surname" id="surname" maxlength="25" class="form-control" placeholder="Insert surname" value="<?php if (isset($row)) echo $row["surname"]?>"/>
 					</div>
 					<div class="form-group">
-						<label class="control-label" for="Name">Name:</label>
-						<input required type="text" name="Name" id="Name" maxlength="25" class="form-control" placeholder="Insert Name" value="<?php if (isset($row)) echo $row["Name"]?>"/>
+						<label class="control-label" for="name">name:</label>
+						<input required type="text" name="name" id="name" maxlength="25" class="form-control" placeholder="Insert name" value="<?php if (isset($row)) echo $row["name"]?>"/>
 					</div>
 					<div class="form-group">
-						<label class="control-label" for="Phonenumber">Phonenumber:</label>
-						<input required type="text" name="Phonenumber" id="Phonenumber" maxlength="25" class="form-control" placeholder="Insert Phonenumber" value="<?php if (isset($row)) echo $row["Phonenumber"]?>"/>
+						<label class="control-label" for="phonenumber">phonenumber:</label>
+						<input required type="text" name="phonenumber" id="phonenumber" maxlength="25" class="form-control" placeholder="Insert phonenumber" value="<?php if (isset($row)) echo $row["phonenumber"]?>"/>
 					</div>
 					<div class="form-group">
-						<label class="control-label" for="Mail">Mail:</label>
-						<input required type="text" name="Mail" id="Mail" maxlength="50" class="form-control" placeholder="Insert Mail" value="<?php if (isset($row)) echo $row["Mail"]?>"/>
+						<label class="control-label" for="mail">mail:</label>
+						<input required type="text" name="mail" id="mail" maxlength="50" class="form-control" placeholder="Insert mail" value="<?php if (isset($row)) echo $row["mail"]?>"/>
 					</div>
                     <div class="form-group">
-                        <label class="control-label" for="Address">Address:</label>
-                        <input required type="text" name="Address" id="Address" maxlength="25" class="form-control" placeholder="Insert Address" value="<?php if (isset($row)) echo $row["Address"]?>"/>
+                        <label class="control-label" for="address">address:</label>
+                        <input required type="text" name="address" id="address" maxlength="25" class="form-control" placeholder="Insert address" value="<?php if (isset($row)) echo $row["address"]?>"/>
                     </div>
                     <div class="form-group">
                         <label class="control-label" for="parroquia">Parròquia:</label>
@@ -73,8 +73,8 @@
                     
                     <div class="form-group">
                         <center>
-                            <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-send"></span> Enviar</button>
-                            <button type="button" onClick="window.print();" class="btn btn-primary"><span class="glyphicon glyphicon-print"></span> imprimir</button>
+                            <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-send"></span> Send</button>
+                            <button type="button" onClick="window.print();" class="btn btn-primary"><span class="glyphicon glyphicon-print"></span> Print</button>
                         </center>
                     </div>
 				</form>
