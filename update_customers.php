@@ -8,36 +8,25 @@
 	$surname=$_REQUEST["surname"];
 	$name=$_REQUEST["name"];
 	$phonenumber=$_REQUEST["phonenumber"];
-	$correu1=$_REQUEST["correu1"];
-    $correu2=$_REQUEST["correu2"];
-	$hora=$_REQUEST["hora"];
-	$dia=$_REQUEST["dia"];
-	$mes=$_REQUEST["mes"];
-	$any=$_REQUEST["any"];
-	$tecnic=$_REQUEST["tecnic"];
+	$mail=$_REQUEST["mail"];
+    $address=$_REQUEST["address"];
 	$parroquia=$_REQUEST["parroquia"];
-	$tipus=$_REQUEST["tipus"];
-	$estat=$_REQUEST["estat"];
-	$observacions=$_REQUEST["observacions"];
-	$idioma=$_REQUEST["idioma"];
-	$dificultat=$_REQUEST["dificultat"];
-	$descripcio=$_REQUEST["descripcio"];
     if ($operacio=="new") {
-        $sql="INSERT INTO incidencies (id_customer,surname,name,phonenumber,correu1,correu2,hora,dia,mes,any,tecnic,parroquia,tipus,estat,observacions,idioma,dificultat,descripcio) VALUES ($id_customer, \"$surname\", \"$name\", \"$phonenumber\", \"$correu1\", \"$correu2\", \"$hora\", $dia, $mes, $any, \"$tecnic\", \"$parroquia\", \"$tipus\", \"$estat\", \"$observacions\", \"$idioma\", \"$dificultat\", \"$descripcio\");";
+        $sql="INSERT INTO customers (id_customer,surname,name,phonenumber,mail,address,parroquia) VALUES (\"$id_customer\", \"$surname\", \"$name\", \"$phonenumber\", \"$mail\", \"$address\",\"$parroquia\");";
     } else {
-        $sql="UPDATE incidencies SET surname=\"$surname\",name=\"$name\",phonenumber=\"$phonenumber\",correu1=\"$correu1\",correu2=\"$correu2\",hora=\"$hora\",dia=$dia,mes=$mes,any=$any,tecnic=\"$tecnic\",parroquia=\"$parroquia\",tipus=\"$tipus\",estat=\"$estat\",observacions=\"$observacions\",idioma=\"$idioma\",dificultat=$dificultat,descripcio=\"$descripcio\" WHERE id_customer=$id_customer;";
+        $sql="UPDATE customers SET surname=\"$surname\",name=\"$name\",phonenumber=\"$phonenumber\",mail=\"$mail\",address=\"$address\",parroquia=\"$parroquia\" WHERE id_customer=$id_customer;";
     }
     obrirConnexioBD();
     if ($conn->query($sql) === TRUE) {
         tancarConnexioBD();
-        header("Location: llistat_incidencies.php");
+        header("Location: list_customers.php");
     } else { ?>
         <!DOCTYPE html>
         <html lang="en">
-            <?php bsHead("Creat/modificat"); ?>
+            <?php bsHead("Created/modified"); ?>
             <body>
                 <div class="alert alert-danger" role="alert">
-                    <h3>Error creant/modificant incidència</h3>
+                    <h3>Error creanting/modificating customer</h3>
                     <p><?=$conn->error?></p>
                 </div>
             </body>
